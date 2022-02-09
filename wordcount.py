@@ -22,7 +22,7 @@ def count_words(filename):
             #print(type(word))
             #word = word.strip(",.\n.?").lower()
             #word_count[word] = word_count.get(word, 0) + 1
-    for key, value in sorted(word_count.items(), key = lambda x: x[1]):
+    for key, value in sorted(word_count.items(), key = lambda x: (-x[1], x[0])):
         print("{} {}".format(key, value))
 
 file_name = sys.argv[1]
